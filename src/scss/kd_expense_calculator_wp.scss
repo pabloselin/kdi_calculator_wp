@@ -22,6 +22,7 @@ body.kd_expense_calculator_wp_active {
     transition: all ease-in-out 0.2s;
     font-size: 16px;
     line-height: 1.2em;
+    z-index: 10000;
     p {
         margin: 12px 0;
     }
@@ -89,6 +90,7 @@ body.kd_expense_calculator_wp_active {
                 right: 90px;
                 left: auto;
                 bottom: auto;
+                position: absolute;
             }
             &:hover {
                 background-image: $lightbulb_on

@@ -4,10 +4,10 @@ BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
 	context: __dirname,
-	entry: { kd_expense_calculator_wp_v021: ["./src/js/index.js", "./src/scss/kd_expense_calculator_wp.scss"] },
+	entry: { kd_expense_calculator_wp_v022: ["./src/js/index.js", "./src/scss/kd_expense_calculator_wp.scss"] },
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "kd_expense_calculator_wp_v021.js",
+		filename: "kd_expense_calculator_wp_v022.js",
 		clean: true,
 	},
 	mode: "development",
