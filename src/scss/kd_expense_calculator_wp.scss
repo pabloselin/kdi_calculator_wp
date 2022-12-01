@@ -82,6 +82,12 @@ body.kd_expense_calculator_wp_active {
             bottom: 36px;
             left: -36px;
             z-index: 900;
+            @media screen and (max-width: 768px) {
+                top: 24px;
+                right: 90px;
+                left: auto;
+                bottom: auto;
+            }
             &:hover {
                 background-image: $lightbulb_on
             }
@@ -94,6 +100,9 @@ body.kd_expense_calculator_wp_active {
 
         .kd_expense_table {
             padding: 12px;
+            @media screen and (max-width: 768px) {
+                margin-top: 36px;
+            }
         }
 
         .kd_desglose {
@@ -111,8 +120,25 @@ body.kd_expense_calculator_wp_active {
         #kd_expense_calculator button {
             background-image: $lightbulb_on;
             @media screen and (max-width: 768px) {
-                right: 16px;
+                right: 90px;
                 left: auto;
+                &:after {
+                    content: "cerrar";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                    border: 0;
+                    padding: 6px 12px;
+                    text-indent: 72px;
+                    cursor: pointer;
+                }
             }
         }
     }
