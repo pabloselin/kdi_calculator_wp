@@ -19,6 +19,7 @@ body.kd_expense_calculator_wp_active {
     border-left: 1px solid black;
     transition: all ease-in-out 0.2s;
     font-size: 16px;
+    line-height: 1.2em;
     p {
         margin: 12px 0;
     }
@@ -26,10 +27,13 @@ body.kd_expense_calculator_wp_active {
         font-weight: bold;
         font-size: 26px;
         margin-top: 36px;
+        @media screen and (max-width: 768px) {
+            font-size: 21px;
+        }
     }
 
     h1 {
-        margin-bottom: 0;
+        margin-bottom: 6px;
     }
 
     h2 {
@@ -47,10 +51,6 @@ body.kd_expense_calculator_wp_active {
         font-style: italic;
         margin-bottom: 24px;
         display: block;
-    }
-
-    .kd_equivalence {
-        margin: 24px 0;
     }
 
     .kd_ip {
@@ -87,7 +87,10 @@ body.kd_expense_calculator_wp_active {
             }
         }
 
-        
+        .kd_equivalence, .kd_ip, .kd_country {
+            padding: 12px;
+            border: 1px dashed #ccc;
+        }
 
         .kd_expense_table {
             padding: 12px;
@@ -95,6 +98,12 @@ body.kd_expense_calculator_wp_active {
 
         .kd_desglose {
             font-size: 12px;
+            padding: 12px;
+            background-color: #f0f0f0;
+            opacity: 0.8;
+            h2 {
+                margin-top: 0;
+            }
         }
     }
 
