@@ -44,9 +44,10 @@ body.kd_expense_calculator_wp_active {
     }
 
     .kd_activity {
-        padding: 12px;
+        padding: 12px 36px 12px 12px;
         border: 1px dashed black;
         margin: 24px 0;
+        position: relative;
     }
 
     .kd_detail {
@@ -54,6 +55,17 @@ body.kd_expense_calculator_wp_active {
         font-style: italic;
         margin-bottom: 24px;
         display: block;
+    }
+
+    .reload {
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px;
+        font-size: 12px;
+        background-color:#f0f0f0;
+        position: absolute;
+        bottom: 0;
+        right: 0
     }
 
     .kd_ip {
@@ -111,11 +123,14 @@ body.kd_expense_calculator_wp_active {
 
         .kd_desglose {
             font-size: 12px;
-            padding: 12px;
+            padding: 6px 12px 1px 12px;
             background-color: #f0f0f0;
             opacity: 0.8;
             h2 {
                 margin-top: 0;
+            }
+            .kd_detail {
+                font-size: 12px;
             }
         }
     }
