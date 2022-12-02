@@ -1,5 +1,9 @@
 console.log("init expense calculator wp");
 
+const kd_info = document.getElementById("kd_info");
+
+//kd_container.innerHTML += 
+
 document.addEventListener("click", function (e) {
   if (
     (e.target && e.target.className === "kd_calculate_button") ||
@@ -15,12 +19,14 @@ document.addEventListener("click", function (e) {
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove("active");
       }
+      kd_info.innerHTML = '';
     } else {
       appContainer.classList.add("active");
       document.body.classList.add("kd_expense_calculator_wp_active");
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.add("active");
       }
+      kd_info.innerHTML += `<a class="kd_button_more_info" href="https://pluriversidadnomada.net/cuaderno_de_notas/calculadora-de-gasto-energetico-para-webs/">más info</a>`
     }
   }
 });

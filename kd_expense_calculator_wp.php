@@ -9,19 +9,19 @@ Author URI: http://pablosel.in
 License: GPL2
 */
 
-define('KD_PLUGIN_VERSION', '0.2.3');
+define('KD_PLUGIN_VERSION', '0.2.4');
 
 function kd_enqueue_scripts() {
     //Main script
     wp_enqueue_script( 'kd_expense_calculator', plugins_url('build/static/js/kd_expense_calculator.js', __FILE__ ), array(), KD_PLUGIN_VERSION, true );
-    wp_enqueue_script( 'kd_expense_calculator_wp', plugins_url('dist/kd_expense_calculator_wp_v023.js', __FILE__ ), array(), KD_PLUGIN_VERSION, true );
-    wp_enqueue_style( 'kd_expense_calculator', plugins_url('dist/kd_expense_calculator_wp_v023.css', __FILE__ ), array(), KD_PLUGIN_VERSION, 'all' );
+    wp_enqueue_script( 'kd_expense_calculator_wp', plugins_url('dist/kd_expense_calculator_wp_v024.js', __FILE__ ), array(), KD_PLUGIN_VERSION, true );
+    wp_enqueue_style( 'kd_expense_calculator', plugins_url('dist/kd_expense_calculator_wp_v024.css', __FILE__ ), array(), KD_PLUGIN_VERSION, 'all' );
 }
 
 add_filter( 'wp_enqueue_scripts', 'kd_enqueue_scripts' );
 
 function kd_insert_info() {
-    echo '<div id="kd_expense_calculator_wp"><div id="kd_expense_calculator"><!-- javascript rendered content --></div></div>';
+    echo '<div id="kd_expense_calculator_wp"><div id="kd_expense_calculator"><!-- javascript rendered content --></div><div id="kd_info"></div></div>';
 }
 
 add_action( 'wp_footer', 'kd_insert_info' );

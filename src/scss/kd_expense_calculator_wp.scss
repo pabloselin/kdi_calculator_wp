@@ -10,6 +10,18 @@ body.kd_expense_calculator_wp_active {
     }
 }
 
+#kd_info {
+    
+    text-align: right;
+    a {
+        color: #000;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
 #kd_expense_calculator_wp {
     position: fixed;
     right: 0;
@@ -23,6 +35,11 @@ body.kd_expense_calculator_wp_active {
     font-size: 16px;
     line-height: 1.2em;
     z-index: 10000;
+    
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+
     p {
         margin: 12px 0;
     }
