@@ -22,6 +22,12 @@ body.kd_expense_calculator_wp_active {
     }
 }
 
+.admin-bar #kd_expense_calculator_wp {
+    button {
+        margin-top: 32px;
+    }
+}
+
 #kd_expense_calculator_wp {
     position: fixed;
     right: 0;
@@ -101,18 +107,18 @@ body.kd_expense_calculator_wp_active {
 
         button {
             background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
             border: 0;
             padding: 6px 12px;
             text-indent: -9999px;
             cursor: pointer;
             background-image: $lightbulb_off;
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: fit;
+            background-position: 3px center;
+            background-size: contain;
             position: absolute;
-            bottom: 36px;
-            left: -36px;
+            //bottom: 36px;
+            left: -72px;
+            top: 40px;
             z-index: 900;
             @media screen and (max-width: 768px) {
                 top: 24px;
@@ -155,9 +161,19 @@ body.kd_expense_calculator_wp_active {
     &.active {
         #kd_expense_calculator button {
             background-image: $lightbulb_on;
+            background-position: 1px center;
+            background-size: 36px 29px;
+            padding: 20px 12px;
+            left: -36px;
+            background-color: white;
+            width: 36px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black white black black;
             @media screen and (max-width: 768px) {
                 right: 90px;
                 left: auto;
+                border: 0;
                 &:after {
                     content: "cerrar";
                     position: absolute;
